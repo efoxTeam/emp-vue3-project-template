@@ -1,0 +1,9 @@
+{
+  "name": "vue3Project",
+  "remotes": {
+    "vue3Components": "vue3Components"
+  },
+  "exposes": {
+  },
+  "shared": []
+}
