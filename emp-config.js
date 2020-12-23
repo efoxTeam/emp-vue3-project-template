@@ -17,8 +17,6 @@ module.exports = withVue3(({ config, env, empEnv }) => {
       ...args[0],
       ...{
         ...empConfig,
-        // 暴露项目的全局变量名
-        library: { type: 'var', name: empConfig.name },
         // 被远程引入的文件名
         filename: 'emp.js',
       },
@@ -34,7 +32,7 @@ module.exports = withVue3(({ config, env, empEnv }) => {
         title: 'EMP Vue3 Project',
         // 远程调用项目的文件链接
         files: {
-          js: [conf.baseRemoteEntry],
+          js: [],
         },
       },
     }
