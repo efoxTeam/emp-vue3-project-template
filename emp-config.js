@@ -2,7 +2,6 @@ const withVue3 = require('@efox/emp-vue3')
 const path = require('path')
 const ProjectRootPath = path.resolve('./')
 const { getConfig } = require(path.join(ProjectRootPath, './src/config'))
-const empConfig = require(`${resolveApp('')}/emp.json`);
 module.exports = withVue3(({ config, env, empEnv }) => {
   const confEnv = env === 'production' ? 'prod' : 'dev'
   const conf = getConfig(empEnv || confEnv)
@@ -16,7 +15,10 @@ module.exports = withVue3(({ config, env, empEnv }) => {
     args[0] = {
       ...args[0],
       ...{
-        ...empConfig,
+        name: "vue3Project",
+        remotes: {
+          "vue3Components": "vue3Components@http://localhost:8006/emp.js"
+        },
         // 被远程引入的文件名
         filename: 'emp.js',
       },

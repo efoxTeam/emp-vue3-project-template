@@ -1,9 +1,0 @@
-{
-  "name": "vue3Project",
-  "remotes": {
-    "vue3Components": "vue3Components@http://localhost:8006/emp.js"
-  },
-  "exposes": {
-  },
-  "shared": []
-}
